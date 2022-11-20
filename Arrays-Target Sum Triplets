@@ -1,0 +1,44 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int a[n];
+    for(int i=0; i<n; i++){
+        cin >> a[i];
+    }
+    int s;
+    cin >> s;
+    sort(a, a+n);
+
+    for(int i=0; i<n; i++){ // for all i calculate 2 sum
+		int first = a[i];
+		int j = i+1;
+		int k = n-1; 
+        // from here it is same as 2 sum
+		while(j<k){
+			int second = a[j];
+			int third = a[k];
+			int sum = first + second + third;
+			if(sum == s){
+                cout<<first<<", "<<second<<" and "<<third<<endl;
+                // skipping for j and k to vaoid duplicate element
+                while(a[j] == second)j++;
+                while(a[k] == third)k--;
+            }
+			else if(sum > s)k--;
+			else j++;
+		}
+        // skipping for i k to vaoid duplicate element
+    while(a[i] == first)i++;i--;
+    }
+    return 0;
+}
+
+
+
+
+ 
+
+ 
