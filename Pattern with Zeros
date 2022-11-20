@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	for(int i =1 ;i<=n;i++){
+		if(i<=2){
+			int k = i,j=i;
+			while(k--){
+				cout << j <<"\t";
+			}
+		}
+		if(i>=3){
+			cout << i << "\t";
+		}
+		for(int j = 2;j<=i-1;j++){
+			cout << 0 << "\t";
+		}
+		if(i>=3){
+			cout << i << "\t";
+		}
+		cout << endl;
+	}
+	return 0;
+}
