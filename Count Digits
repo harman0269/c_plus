@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int count(int n,int x){
+	int cnt = 0;
+	while(n>0){
+		int rem = n%10;
+		if(rem==x){
+			cnt++;
+		}
+		n/=10;
+	}
+	return cnt;
+}
+
+int main() {
+	int n,x;
+	cin >> n >> x;
+	cout << count(n,x) << endl;
+	return 0;
+}
