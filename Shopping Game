@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int t,n,m;
+	cin >> t ;
+	while(t--){
+		cin >> m >> n;
+		int ph =1 ;
+		while(m>=0 && n>=0){
+			if(ph%2!=0){
+				m = m-ph;
+			}
+			else{
+				n = n- ph;
+			}
+			ph++;
+		}
+		if(m<0){
+			cout << "Harshit" << endl;
+		}
+		else{
+			cout << "Aayush" << endl;
+		}
+	}
+	return 0;
+}
