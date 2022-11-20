@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int FindNumber(int arr[][100],int n,int m, int x ){
+    for(int row=0;row<n;row++){
+        for(int col=0;col<m;col++){
+            if(arr[row][col] == x){
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+int main() {
+  int n,m;
+  cin>>n;
+  cin>>m;
+  int arr[100][100];
+  for(int row=0;row<n;row++){
+    for(int col=0;col<m;col++){
+      cin>>arr[row][col];
+    }
+  }
+  int x;
+  cin>>x;
+  cout<<FindNumber(arr,n,m,x);
+  return 0;
+    
+}
