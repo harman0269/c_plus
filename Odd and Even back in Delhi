@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int n,t;
+	cin >> t;
+	while(t--){
+		int sumE = 0,sumO =0;
+		cin >> n;
+		while(n>0){
+			int rem = n%10;
+			if(rem%2==0){
+				sumE+=rem;
+			}
+			else{
+				sumO+=rem;
+			}
+			n/=10;
+		}
+		if(sumE%4==0 || sumO%3==0){
+			cout << "Yes" << endl;
+		}
+		else{
+			cout << "No" << endl;
+		}
+	}
+	return 0;
+}
+
