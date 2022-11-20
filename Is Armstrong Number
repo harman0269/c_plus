@@ -1,0 +1,32 @@
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int digits(int n){
+	int dig = 0;
+	while(n>0){
+		dig++;
+		n/=10;
+	}
+	return dig;
+}
+
+int main() {
+	int n;
+	cin >> n;
+	int org = n;
+	int power = digits(n);
+	int arm = 0;
+	while(n>0){
+		int rem = n%10;
+		arm = arm + pow(rem,power);
+		n/=10;
+	}
+	if(arm==org){
+		cout << "true" << endl;
+	}
+	else{
+		cout << "false" << endl;
+	}
+	return 0;
+}
