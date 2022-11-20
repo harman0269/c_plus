@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int n;
+	cin >> n;
+	for(int i =1;i<=n;i++){
+		for(int sp =1 ;sp<=(n-i);sp++){
+			cout << "\t";
+		}
+		int k = i;
+		int j = i;
+		while(k--){
+			cout << j << "\t";
+			j++;
+		}
+		j--;
+		int k1 = i-1;
+		while(k1--){
+			j--;
+			cout << j << "\t";
+		}
+		cout << endl;
+	}
+	return 0;
+}
