@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int n;
+	cin >> n;
+	int sumE = 0,sumO = 0;
+	int choice = 1;
+	while(n>0){
+		int rem = n%10;
+		if(choice==1){
+			sumO+=rem;
+			choice = 0;
+			n/=10;
+			continue;
+		}
+		else{
+			sumE+=rem;
+			choice = 1;
+			n/=10;
+			continue;
+		}
+	}
+	cout << sumO << "\n" << sumE << endl;
+	return 0;
+}
